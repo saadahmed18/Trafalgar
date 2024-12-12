@@ -13,6 +13,7 @@
   --h3-size: 24px;
   --h4-size: 20px;
   --text-size: 18px;
+  --padding-section: 75px 0;
 }
 .container {
   padding: 0 15px;
@@ -115,5 +116,54 @@ header ul li a {
   }
   nav ul li .active {
     color: var(--title-color);
+  }
+}
+.hero {
+  padding: var(--padding-section);
+  position: relative;
+}
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.hero .info h1 {
+  font-size: 40px;
+}
+.hero .info p {
+  margin: 25px 0;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+.hero .info a {
+  display: block;
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 25px;
+  color: var(--alt-text-color);
+  background-color: var(--main-color);
+}
+.hero .container .images img:last-child {
+  position: absolute;
+  top: 20%;
+  left: -50px;
+}
+@media (max-width: 991px) {
+  .hero .images {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .hero .info {
+    width: 45%;
+  }
+  .hero .images {
+    width: 45%;
+  }
+  .hero .images img:first-child {
+    width: 550px;
   }
 }
