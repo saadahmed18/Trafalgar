@@ -43,9 +43,33 @@ ul {
 a {
   text-decoration: none;
 }
+h2::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 45%;
+  width: 100px;
+  height: 2px;
+  background-color: var(--title-color);
+}
+.btn {
+  display: block;
+  width: 150px;
+  margin: 50px auto 0 auto;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid var(--main-color);
+  border-radius: 25px;
+  color: var(--main-color);
+}
+.btn:hover {
+  color: var(--alt-text-color);
+  background-color: var(--main-color);
+}
 header {
   position: sticky;
   top: 0;
+  z-index: 10;
   padding: 20px 0;
   box-shadow: 0px 1px 1px 0px #0000005a;
   background-color: var(--alt-text-color);
@@ -118,7 +142,8 @@ header ul li a {
     color: var(--title-color);
   }
 }
-.hero {
+.hero,
+.our-services {
   padding: var(--padding-section);
   position: relative;
 }
@@ -146,11 +171,6 @@ header ul li a {
   color: var(--alt-text-color);
   background-color: var(--main-color);
 }
-.hero .container .images img:last-child {
-  position: absolute;
-  top: 20%;
-  left: -50px;
-}
 @media (max-width: 991px) {
   .hero .images {
     display: none;
@@ -165,5 +185,54 @@ header ul li a {
   }
   .hero .images img:first-child {
     width: 550px;
+  }
+  .hero .container .images img:last-child {
+    position: absolute;
+    top: 20%;
+    left: -50px;
+  }
+}
+.our-services .container h2 {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+}
+.our-services .container .description {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-color);
+}
+.our-services .services-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.our-services .services-list .service {
+  width: 350px;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 1px 1px 0px #0000005a;
+  background-color: var(--alt-text-color);
+}
+.services-list .service h3 {
+  margin: 25px 0;
+}
+.services-list .service p {
+  line-height: 1.5;
+  color: var(--text-color);
+}
+@media (max-width: 991px) {
+  .our-services .image {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .our-services .image img {
+    width: 650px;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: -2;
   }
 }
