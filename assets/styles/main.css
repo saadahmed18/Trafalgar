@@ -121,6 +121,12 @@ header .logo span {
 header ul li a {
   color: var(--text-color);
 }
+header ul li a:hover {
+  color: var(--title-color);
+}
+nav ul li .active {
+  color: var(--title-color);
+}
 @media (max-width: 991px) {
   header nav {
     position: relative;
@@ -140,15 +146,14 @@ header ul li a {
     position: absolute;
     top: 49px;
     right: 0;
-    background-color: var(--title-color);
+    background-color: white;
   }
   header ul li a {
     display: block;
     padding: 8px 15px;
-    color: var(--alt-text-color);
   }
   header ul li:not(:last-child) {
-    border-bottom: 1px solid rgba(253, 253, 253, 0.616);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.308);
   }
 }
 @media (min-width: 992px) {
@@ -159,9 +164,6 @@ header ul li a {
   nav ul {
     display: flex;
     gap: 25px;
-  }
-  nav ul li .active {
-    color: var(--title-color);
   }
 }
 .hero,
