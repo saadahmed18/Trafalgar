@@ -236,18 +236,23 @@ header ul li a {
     z-index: -2;
   }
 }
-.healthcare .container {
+.healthcare .container,
+.apps .container {
   gap: 100px;
 }
-.healthcare .info .title-section {
+.healthcare .info .title-section,
+.apps .info .title-section {
   text-align: left;
 }
-.healthcare .info .title-section::before {
+.healthcare .info .title-section::before,
+.apps .info .title-section::before {
   left: 50px;
 }
-.healthcare .info .description {
+.healthcare .info .description,
+.apps .info .description {
   text-align: left;
 }
-.healthcare .btn {
+.healthcare .btn,
+.apps .btn {
   margin: 0;
 }
