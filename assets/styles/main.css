@@ -10,10 +10,10 @@
   --alt-text-color: #ffffff;
   --h1-size: 48px;
   --h2-size: 36px;
-  --h3-size: 24px;
-  --h4-size: 20px;
-  --text-size: 18px;
-  --padding-section: 75px 0;
+  --padding-section: 75px;
+}
+html {
+  scroll-behavior: smooth;
 }
 .container {
   padding: 0 15px;
@@ -37,6 +37,9 @@
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+img {
+  max-width: 100%;
+}
 ul {
   list-style: none;
 }
@@ -49,13 +52,15 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
+.text-center {
+  text-align: center;
+}
 section {
-  padding: var(--padding-section);
+  padding: var(--padding-section) 0;
 }
 .title-section {
   position: relative;
   padding-bottom: 25px;
-  text-align: center;
   font-size: 30px;
 }
 .title-section::before {
@@ -70,7 +75,6 @@ section {
 }
 .description {
   margin: 40px 0;
-  text-align: center;
   line-height: 1.5;
   color: var(--text-color);
 }
@@ -170,34 +174,21 @@ nav ul li .active {
 .our-services {
   position: relative;
 }
-.hero .container {
+.hero .container,
+.healthcare .container,
+.apps .container,
+.testimonials .container .testimonial {
   gap: 100px;
 }
 .hero .info h1 {
-  font-size: 40px;
-}
-.hero .info p {
-  margin: 25px 0;
-  line-height: 1.5;
-  color: var(--text-color);
+  font-size: var(--h1-size);
 }
 .hero .info a {
   margin: 0;
   color: var(--alt-text-color);
   background-color: var(--main-color);
 }
-@media (max-width: 991px) {
-  .images {
-    display: none;
-  }
-}
 @media (min-width: 992px) {
-  .info {
-    width: 45%;
-  }
-  .images {
-    width: 45%;
-  }
   .images img:first-child {
     width: 550px;
   }
@@ -238,23 +229,38 @@ nav ul li .active {
     z-index: -2;
   }
 }
-.healthcare .container,
-.apps .container {
-  gap: 100px;
-}
 .healthcare .info .title-section,
-.apps .info .title-section {
+.apps .info .title-section,
+.healthcare .info .description,
+.apps .info .description {
   text-align: left;
 }
 .healthcare .info .title-section::before,
 .apps .info .title-section::before {
   left: 50px;
 }
-.healthcare .info .description,
-.apps .info .description {
-  text-align: left;
-}
 .healthcare .btn,
 .apps .btn {
   margin: 0;
+}
+.testimonials .container {
+  padding: 50px;
+  border-radius: 25px;
+  color: var(--alt-text-color);
+  background-color: var(--main-color);
+}
+.testimonials .title-section::before {
+  background-color: var(--alt-text-color);
+}
+.testimonials .testimonial {
+  padding-top: 40px;
+}
+.testimonial .user {
+  gap: 20px;
+}
+.testimonial .user h3 {
+  margin-bottom: 10px;
+}
+.testimonials q {
+  line-height: 1.5;
 }
